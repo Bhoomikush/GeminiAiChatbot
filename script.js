@@ -280,6 +280,14 @@ stopResponseBtn.addEventListener("click", () => {
 promptForm.addEventListener("submit", handleFormSubmit);
 promptForm.querySelector("#add-file-btn").addEventListener("click", () => fileInput.click());
 
+// Clicking a suggestion fills the input with its text and submits it
+document.querySelectorAll(".suggestions-item").forEach((suggestion) => {
+  suggestion.addEventListener("click", () => {
+    promptInput.value = suggestion.querySelector(".text").textContent;
+    promptForm.requestSubmit();
+  });
+});
+
 // Delete chat (clear conversation)
 document.querySelector("#delete-toggle-btn").addEventListener("click", () => {
   chatHistory.length = 0; // clear conversation history
