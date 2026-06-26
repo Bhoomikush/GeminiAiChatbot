@@ -49,7 +49,17 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
                 <form action="#" class="prompt-form">
                     <input type="text" placeholder="Ask Gemini" class="prompt-input">
                 <div class="prompt-actions">
-                    <button id="add-file-btn" type="button" class="material-symbols-rounded">attach_file</button>
+                    <!-- File upload Wrapper-->
+                    <div class="file-upload-wrapper">
+                        <img src="" class="file-preview" alt="">
+                        <span class="material-symbols-rounded file-icon">description</span>
+                        <input type="file" accept="image/*, .pdf, .txt, .csv" id="file-input" hidden>
+
+                        <button id="add-file-btn" type="button" class="material-symbols-rounded">attach_file</button>
+                        <button id="cancel-file-btn" type="button" class="material-symbols-rounded">close</button>
+                    </div>
+                    <button id="stop-response-btn" type="button" class="material-symbols-rounded">stop</button>
+                    
                     <button id="send-file-btn" type="submit" class="material-symbols-rounded">arrow_upward</button>
                 </div>
                 </form>
